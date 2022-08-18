@@ -8,11 +8,11 @@ int RandomInt (int min, int max)
     return new Random().Next(min, max);
 }
 int n = 0;
-while (n < 10)
+while (n < 5)
 {
     int val = RandomInt(1,8);
         Console.WriteLine(val);
-    if (val > 10)
+    if (val > 5)
     {
         Console.WriteLine("выходной");
     }
