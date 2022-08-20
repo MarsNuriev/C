@@ -3,10 +3,15 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-int N = 5;
- Console.WriteLine(N + "-->");
-for (int i = 1; i <= N; i++)
-{
-    Console.WriteLine(i*i*i);
-}   
 
+void kub (int N)
+{
+    Console.Write(N + "--> ");
+
+    for (int i = 1; i <= N; i++)
+    {
+        Console.Write($"{i*i*i} ");
+    }  
+}
+ 
+kub (5);
