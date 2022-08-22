@@ -50,7 +50,7 @@ double MaxMinusMin (double [] array)
     System.Console.WriteLine();
     return Razn;
 }
-double [] arr1 = CreateRandArr(4);
-PrintArr(arr1);
-double a = MaxMinusMin(arr1);
+double [] arr = CreateRandArr(4);
+PrintArr(arr);
+double a = MaxMinusMin(arr);
 System.Console.WriteLine($"Разница = {a}");
