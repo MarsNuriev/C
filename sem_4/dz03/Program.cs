@@ -15,3 +15,24 @@ void PrintArr(int [] array)
     Console.Write("]");
 }
 PrintArr(arr);
+
+System.Console.WriteLine();
+
+// int [] arr2 = new int [4];
+int [] CreateRandArrSize (int min, int max)
+{
+    int N = new Random().Next(min,max);
+    return new int[N];
+}
+
+void FillPrintRandArr (int [] array)
+{
+    int len = array.Length;
+    for (int i = 0; i < len; i++)
+    {
+        array[i] = new Random().Next(0, 10);
+        System.Console.Write($"{array[i]} ");
+    }
+}
+int [] arr3 = CreateRandArrSize(1,9);
+FillPrintRandArr(arr3);
