@@ -14,5 +14,5 @@ int Step (int a, int b)
     }
     return res;
 }
-int c = step(2,5);
+int c = Step(2,5);
 Console.WriteLine(c);
