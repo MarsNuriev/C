@@ -24,7 +24,7 @@ void PrintArr(int[] array)
             }
             Console.Write("]");
             System.Console.WriteLine();
-        }        
+        }
 
 int Chet (int [] array)
 {
