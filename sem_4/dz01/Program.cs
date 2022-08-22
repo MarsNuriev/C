@@ -5,7 +5,7 @@
 // 2, 4 -> 16
 
 
-int step (int a, int b)
+int Step (int a, int b)
 {
     int res = a;
     for (int i = 1; i < b; i++)
