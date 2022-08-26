@@ -6,19 +6,27 @@
 
 
 
-int[] arr = { 0, 1, 2, 3, -5, -6, 8, 9, 10, 13 };
-int a = 0;
-int N = arr.Length;
-for (int i = 0; i< N; i++)
+//int[] arr = { 0, 1, 2, 3, -5, -6, 8, 9, 10, 13 };
+//int a = 0;
+//int N = arr.Length;
+System.Console.WriteLine("Введите число:");
+int ArrLen = Convert.ToInt32(Console.ReadLine());
+int [] array = new int [ArrLen];
+for (int i = 0; i< array.Length; i++)
 {
-    if (arr[i]>0)
-    {
-        a = a+1;
-    }
+    System.Console.Write($"array[{i}]: ");
+    array[i] = Convert.ToInt32(Console.ReadLine());
 }
-System.Console.WriteLine(N);
-Console.WriteLine(a);
 
+void PrintArray(int [] array1)
+{
+    for (int i = 0; i< array1.Length; i++)
+{
+    System.Console.Write($"array[{i}]: ");
+    System.Console.Write($"array[{i}]");
+}
+}
+PrintArray(array);
 
 
 // int a = 1231546 - 65 - 7 - 8 - 910;
