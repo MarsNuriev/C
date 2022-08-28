@@ -18,16 +18,28 @@ for (int i = 0; i< array.Length; i++)
     array[i] = Convert.ToInt32(Console.ReadLine());
 }
 
-void PrintArray(int [] array1)
+void PrintArray(int [] array)
 {
-    for (int i = 0; i< array1.Length; i++)
+    for (int i = 0; i< array.Length; i++)
 {
-    System.Console.Write($"array[{i}]: ");
-    System.Console.Write($"array[{i}]");
+    System.Console.Write($"array[{i}]: {array[i]} ");
 }
 }
-PrintArray(array);
 
+int PositCount (int[] array)
+{
+    int positivecount = 0;
+    for (int i = 0; i < array.Length;i++)
+    {
+       if (array[i] > 0) {positivecount = positivecount + 1;}
+    }
+    return positivecount;
+}
+
+PrintArray(array);
+System.Console.WriteLine();
+int count = PositCount(array);
+System.Console.WriteLine($"Число положительных эл-тов = {count}");
 
 // int a = 1231546 - 65 - 7 - 8 - 910;
 // int d = 0;
