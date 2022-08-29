@@ -22,8 +22,6 @@ int[,] CreateArray(int m, int n)
     return array;
 }
 
-
-
 void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -40,17 +38,17 @@ void PrintArray(int[,] array)
 int[,] arr = CreateArray(4,4);
 PrintArray(arr);
 
-System.Console.WriteLine("Введите коордианты массива: ");
-System.Console.Write("Строка = ");
-int ArrRow = Convert.ToInt32(Console.ReadLine());
-System.Console.Write("Столбец = ");
-int ArrCol = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите коордианты массива: ");
+// System.Console.Write("Строка = ");
+// int arrrow = Convert.ToInt32(Console.ReadLine());
+// System.Console.Write("Столбец = ");
+// int arrcol = Convert.ToInt32(Console.ReadLine());
 
-void ArrayPoint (int[,] array)
+void ArrayPoint (int[,] array,int row, int col)
 {
-    if (ArrRow < array.GetLength(0) && ArrCol < array.GetLength(1))
+    if (row < array.GetLength(0) && col < array.GetLength(1))
     {
-        int result = array[ArrRow, ArrCol];
+        int result = array[row, col];
         System.Console.WriteLine($"Значение элемента = {result}");
     }
     else
@@ -58,4 +56,4 @@ void ArrayPoint (int[,] array)
         System.Console.WriteLine("Такого числа в массиве нет");
     }
 }
-ArrayPoint(arr);
+ArrayPoint(arr,2,2);
