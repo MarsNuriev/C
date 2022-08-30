@@ -32,23 +32,28 @@ void PrintArray(int[,] array)
 
 }
 
-void Arithm(int[,] array, int j)
+void Arithm(int[,] array)
 {
-    int sum = 0;
+    int[] sum = new int[array.GetLength(1)];
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        sum = sum + array[i, j];
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            sum[i] += array[j, i];
+            //System.Console.Write($"{sum[i]} ");
+        }
     }
-    double arit = sum * 1.0 / array.GetLength(0);
-    System.Console.Write($"{arit:0.0} ");
+    System.Console.WriteLine();
+    System.Console.WriteLine("Средние арифметические столбцов равны:");
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        double arit = sum[j] * 1.0 / array.GetLength(0);
+        System.Console.Write($"{arit:0.0} ");
+    }
 }
 
-
-int[,] arr = CreateArray(4,4);
+int[,] arr = CreateArray(4, 4);
 PrintArray(arr);
-System.Console.WriteLine();
-System.Console.WriteLine("Среднеарифметическое столбцов =");
-for (int j = 0; j < arr.GetLength(1); j++)
-{
-    Arithm(arr, j);
-}
+Arithm(arr);
+
+
